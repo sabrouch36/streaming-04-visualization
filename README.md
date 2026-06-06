@@ -365,3 +365,19 @@ Look for the word `chart`:
 ```
 
 ![Example Chart after 3 messages](./docs/images/chart_after_3_messages.png)
+
+### My Modification
+
+I created a custom visualization module named `live_visualizations_sabri.py` based on the provided
+example file.
+
+I enhanced the live chart by adding a **Running Average** line in addition to the original
+**Sale Total** line.
+The running average is calculated dynamically as messages are consumed
+from Kafka and is displayed alongside the individual sales values.
+
+This modification improves the visualization by helping users identify overall
+ sales trends and compare individual sales values against the cumulative average in real time.
+
+As a result, the chart now provides both detailed message-level information and a clearer view of overall
+performance during streaming data processing.

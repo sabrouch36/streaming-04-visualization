@@ -59,7 +59,7 @@ from streaming.data_validation.data_contract_case import (
     SALES_REQUIRED_FIELDS,
     validate_required_fields,
 )
-from streaming.visualizations.live_visualizations_case import (
+from streaming.visualizations.live_visualizations_sabri import (
     close_live_chart,
     init_live_chart,
     save_live_chart,
