@@ -368,16 +368,52 @@ Look for the word `chart`:
 
 ### My Modification
 
-I created a custom visualization module named `live_visualizations_sabri.py` based on the provided
-example file.
+I created a custom visualization module named `live_visualizations_sabri.py` based on
+the provided example file.
 
-I enhanced the live chart by adding a **Running Average** line in addition to the original
-**Sale Total** line.
-The running average is calculated dynamically as messages are consumed
-from Kafka and is displayed alongside the individual sales values.
+I enhanced the live chart by adding a **Running Average** line in addition to the
+
+original **Sale Total** line. The running average is calculated dynamically as
+
+Kafka messages are consumed and is displayed alongside the individual sales
+values.
+
+To better demonstrate the effectiveness of the visualization, I increased the
+number of produced messages from 3 to 50. This provided a larger streaming
+dataset and made the trend analysis more meaningful.
 
 This modification improves the visualization by helping users identify overall
- sales trends and compare individual sales values against the cumulative average in real time.
+sales trends, reducing the impact of short-term fluctuations, and enabling a
+comparison between individual sales values and the cumulative average in real
+time.
 
-As a result, the chart now provides both detailed message-level information and a clearer view of overall
-performance during streaming data processing.
+As a result, the chart now provides both detailed message-level information and
+a clearer view of overall performance during streaming data processing.
+
+## Applying the Skills to a New Problem
+
+The original example project focused on visualizing individual sales totals as messages
+ were consumed from a Kafka topic.
+
+To apply the visualization techniques to a new analytical question,
+I enhanced the project by adding a Running Average line to the live chart and increasing
+ the number of processed messages from 3 to 50.
+
+This allowed me to explore the question:
+
+"How does overall sales performance change over time during a streaming session?"
+
+While individual sales values fluctuate significantly from message to message,
+the Running Average provides a smoother view of overall performance and helps identify trends
+that are difficult to observe from individual transactions alone.
+
+By applying live visualization techniques to trend analysis,
+ this project demonstrates how streaming data can be used not only to monitor events in real time,
+  but also to gain meaningful business insights from continuously arriving data.
+
+## Results
+
+The modified visualization processed 50 streaming messages and displayed both
+individual sales totals and the running average.
+
+![My Running Average Chart](./data/output/sales_chart_case.png)
